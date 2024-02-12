@@ -1,0 +1,29 @@
+def count(sentence):
+    """Function to count the number of words in a sentence."""
+
+    # Split the sentence into words using whitespace as delimiter
+    words = sentence.split()
+    # Return the length of the list of words
+    return len(words)
+
+def main():
+    print("Welcome to Word Counter!")
+    while True:
+        user_input = input("Please enter a sentence or paragraph (or type 'exit' to quit): ")
+
+        # Check if the user wants to exit
+        if user_input.lower() == 'exit':
+            print("Thank you for using Word Counter. Goodbye!")
+            break
+
+        # Check if the input is empty
+        if not user_input:
+            print("Error: Empty input. Please enter a sentence or paragraph.")
+            continue
+
+        word_count = count(user_input)
+
+        print("Word count:", word_count)
+
+if __name__ == "__main__":
+    main()
