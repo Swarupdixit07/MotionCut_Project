@@ -1,8 +1,8 @@
-def count(sentence):
+def count(string):
     """Function to count the number of words in a sentence."""
 
     # Split the sentence into words using whitespace as delimiter
-    words = sentence.split()
+    words = string.split()
     # Return the length of the list of words
     return len(words)
 
